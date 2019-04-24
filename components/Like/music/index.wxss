@@ -1,0 +1,5 @@
+@import "../common.wxss";
+.movie-img{
+  width: 400rpx;
+  height: 400rpx;
+}

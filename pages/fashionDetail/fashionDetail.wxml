@@ -1,0 +1,14 @@
+<!--pages/fashion/fashion.wxml-->
+<view class="container">
+  <view class='header'>
+    <v-date day="{{FashionData.index}}" class="date"></v-date>
+    <view class='header-right'>
+      <v-heart count="{{FashionData.fav_nums}}" onOff="{{FashionData.like_status}}"  class="hert">
+      </v-heart>
+      <v-share class="share"></v-share>
+    </view>
+  </view> 
+  <v-movie wx:if="{{FashionData.type==100}}" images="{{FashionData.image}}" content="{{FashionData.content}}"></v-movie>
+  <v-music wx:if="{{FashionData.type==200}}" images="{{FashionData.image}}" content="{{FashionData.content}}" musicSrc="{{FashionData.url}}"></v-music>
+  <v-verse wx:if="{{FashionData.type==300}}" images="{{FashionData.image}}" content="{{FashionData.content}}"></v-verse>
+</view>

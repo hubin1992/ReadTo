@@ -1,0 +1,18 @@
+<!--pages/fashion/fashion.wxml-->
+<view class="container">
+  <view class='header'>
+    <v-date day="{{likeData.index}}" class="date"></v-date>
+    <view class='header-right'>
+      <v-heart count="{{heart.fav_nums}}" onOff="{{heart.like_status}}" bind:like="changeLike" class="hert">
+      </v-heart>
+      <v-button buttonType="share" bind:getInfor="getInfor">
+        <image slot="user" src='../../images/share@2x.png' class="pic"></image>
+      </v-button> 
+    </view>
+  </view>
+  <v-movie wx:if="{{likeData.type==100}}" images="{{likeData.image}}" content="{{likeData.content}}"></v-movie>
+  <v-music wx:if="{{likeData.type==200}}" images="{{likeData.image}}" content="{{likeData.content}}" musicSrc="{{likeData.url}}"></v-music>
+  <v-verse wx:if="{{likeData.type==300}}" images="{{likeData.image}}" content="{{likeData.content}}"></v-verse>
+
+  <v-changeTab class="tab" content="{{likeData.title}}" bind:prev="prev" bind:next="next" First="{{First}}" Latest="{{Latest}}"></v-changeTab>
+</view>

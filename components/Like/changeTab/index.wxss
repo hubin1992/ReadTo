@@ -1,0 +1,17 @@
+.container{
+  width: 588rpx;
+  height: 80rpx;
+  display: inline-flex;
+  background:#f7f7f7;
+  justify-content: space-between;
+  align-items: center;
+}
+.prev,.next{
+  height: 32rpx;
+  width: 26rpx;
+  padding: 24rpx;
+}
+.content{
+  font-size: 24rpx;
+  color: #000;
+}

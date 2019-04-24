@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-button":"../../components/button/index",
+    "v-myLike":"../../components/myLike/index"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-short": "../../components/shortCom/index",
+    "v-heart":"../../components/heart/index"
+  }
+}

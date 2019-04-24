@@ -1,0 +1,3 @@
+<button open-type='{{buttonType}}' bindgetuserinfo="getDetail" hover-class='none'  plain="true">
+  <slot name="user"></slot>
+</button>

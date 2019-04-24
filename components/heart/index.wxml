@@ -1,0 +1,5 @@
+<!--components/heart/index.wxml-->
+<view class='container' bind:tap="changeState">
+  <image src='{{ onOff ? noBg: bg}}' />
+  <text>{{count}}</text>
+</view>

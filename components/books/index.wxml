@@ -1,0 +1,11 @@
+<view class="container" bindtap='toDetail'>
+  <image src="{{book.image}}" class="bg"></image>
+  <view class="des">
+    <text class="title overtop">{{book.title}}</text>
+    <text class="name overtop">{{book.author}}</text>
+    <view class="exp">
+      <text class="like_num">{{book.fav_nums}}</text>
+      <text>喜欢</text>
+    </view>
+  </view>
+</view>

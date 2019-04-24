@@ -1,0 +1,20 @@
+/* components/heart/index.wxss */
+
+.container {
+  display: inline-flex;
+  padding: 10rpx;
+}
+
+.container image {
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.container text {
+  position: relative;
+  left: 2rpx;
+  bottom: 10rpx;
+  font-size: 18rpx;
+  line-height: 18rpx;
+  color: #bbb;
+}

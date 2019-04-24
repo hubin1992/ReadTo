@@ -1,0 +1,42 @@
+.container{
+  width: 330rpx;
+  height: 470rpx;
+  background: #fff;
+  margin-bottom: 28rpx;
+  margin-left: 28rpx;
+}
+.container .top{
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 28rpx;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+}
+
+.container .category{
+  width: 74rpx;
+  height: 42rpx;
+  background: #f7f7f7;
+  color: #0f0f0f;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 42rpx;
+}
+.container .main-pic{
+  width: 330rpx;
+  height: 240rpx;
+  margin-bottom: 32rpx;
+}
+.container .describe{
+  width: 330rpx;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 18rpx;
+  height: 88rpx;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  color: #999999;
+  font-size: 28rpx;
+}

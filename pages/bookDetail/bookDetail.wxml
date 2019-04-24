@@ -1,0 +1,67 @@
+<view class='containear'>
+  <view class='header'>
+    <image class="pic" src='{{detailData.image}}'></image>
+    <text class="name">{{detailData.title}}</text>
+    <text class='author'>{{detailData.author}}</text>
+  </view>
+  <!-- 短评展示 -->
+  <view class='shorcom'>
+    <text class='com-title'>短评</text>
+    <view class='com-con'>
+      <block wx:for="{{shortCom}}" wx:key="item.content">
+        <v-short shortCon="{{item.content}}" class="short {{index==0?'v-tag1':'' || index==1?'v-tag2':''}}">
+          <text class='nums' slot="after">+{{item.nums}}
+          </text>
+        </v-short>
+      </block>
+    </view>
+  </view>
+  <!-- 内容简介 -->
+  <view class='shorcom'>
+    <wxs src="../../util/filter.wxs" module="filter" />
+    <text class='com-title'>内容简介</text>
+    <text class='com-con content-pro' decode='{{true}}'>{{filter.format(detailData.summary)}}</text>
+  </view>
+  <!-- 书本信息 -->
+  <view class='shorcom book-detail-wrap'>
+    <text class='com-title'>书本信息</text>
+    <view class='com-con book-detail'>
+      <view class='book-name'>
+        <text>出版社</text>
+        <text>出版年 </text>
+        <text>页数 </text>
+        <text>定价 </text>
+        <text>装帧 </text>
+      </view>
+      <view class='book-info'>
+        <text>{{detailData.publisher}}</text>
+        <text>{{detailData.pubdate}}</text>
+        <text>{{detailData.pages}}</text>
+        <text>{{detailData.price}}</text>
+        <text>{{detailData.binding}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 书写点评 -->
+  <view class='comment'>
+    <view class='import' bindtap='showInfor'>
+      <image src='../../images/shortComInfor@2x.png' class='icon'></image>
+      <text class='text'>留下你的短评～</text>
+    </view>
+    <v-heart class="heart" count="{{favor.fav_nums}}" onOff="{{favor.like_status}}" bind:like="changeLike"></v-heart>
+  </view>
+  <!-- 短评书写页面 -->
+  <view class='moreInfor' hidden='{{state}}' bindlongtap='showInfor'>
+    <view class='content'>
+      <view class='btn-wrap'>
+        <view class='btn'>
+          <view class='close' bindtap='hideInfor'>取消</view>
+          <view class='submit' bindtap='sendData'>确定</view>
+        </view>
+      </view>
+      <view class='input-warp'>
+        <input type="text" class='text' placeholder="由于后台原因，无法自定义添加" maxlength="12" cursor-spacing="10px" value='{{value}}' bindinput='getInfor' bindconfirm="sendData">  </input>
+      </view>
+    </view>
+  </view>
+</view>

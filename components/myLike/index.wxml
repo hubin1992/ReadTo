@@ -1,0 +1,11 @@
+<view class="container" bindtap='toPage'>
+  <view class="top">
+    <text class="category">{{typeText}}</text>
+    <v-heart count="{{likeObj.fav_nums}}" onOff="{{likeObj.like_status}}" use="true" bind:like="refreshData"></v-heart>
+  </view>
+  <view class='content'>
+    <image src='{{likeObj.image}}' class='main-pic'></image>
+    <text class='describe'>{{likeObj.content}}</text>
+  </view>
+</view>
+  

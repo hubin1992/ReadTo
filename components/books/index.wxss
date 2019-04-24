@@ -1,0 +1,54 @@
+/* components/books/index.wxss */
+.container{
+  position: relative;
+  width: 238rpx;
+  height: 360rpx;
+  box-shadow: 2px 2px 2px #ccc;
+  border-radius:6px;
+  overflow: hidden;
+}
+.container .bg{
+  width: 100%;
+  height: 100%;
+}
+
+.container .des{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 16rpx 18rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size:24rpx;
+  color: #1f1f1f; 
+}
+.name{
+  font-size: 20rpx;
+  color: #999999;
+}
+.exp{
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  margin-top: 10rpx; 
+  font-size: 20rpx;
+  color: #bbb;
+}
+.like_num{
+  margin-right:2px;
+}
+
+.overtop{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

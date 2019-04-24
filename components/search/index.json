@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-shorCom": "../shortCom/index",
+    "v-books": "../books/index",
+    "v-loading":"../loading/index"
+  }
+}

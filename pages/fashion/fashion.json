@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "v-heart":"/components/heart/index",
+    "v-movie":"/components/Like/movie/index",
+    "v-music":"/components/Like/music/index",
+    "v-verse":"/components/Like/verse/index",
+    "v-date":"/components/date/index",
+    "v-changeTab":"/components/Like/changeTab/index",
+    "v-button":"/components/button/index"
+  }
+}

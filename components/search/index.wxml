@@ -1,0 +1,45 @@
+<view class="container">
+  <view class='header'>
+    <image src="../images/search@2x.png" class='search'></image>
+    <input placeholder='图书名称' class='text' cursor-spacing="10rpx" focus="true" bindconfirm="searchBooks" bindfocus="showIcon" value='{{q}}'></input>
+    <view class='del_wrap' bindtap='clearAll'>
+      <image src='../images/del@2x.png' class='del' wx:if="{{iconState}}"></image>
+    </view>
+    <text class="btn" bindtap='hideSearch'>取消</text>
+  </view>
+  <view class='history' wx:if="{{!bookListState}}">
+    <view class='top'>
+      <view class='top-title'>
+        <view class='line'></view>
+        <text class='title'>历史搜索</text>
+      </view>
+      <view class='content'>
+        <view class='content'>
+          <block wx:for="{{hisData}}" wx:key="index">
+            <v-shorCom shortCon="{{item}}" class="item" bind:shorCom="searchBooks"></v-shorCom>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class='top'>
+      <view class='top-title'>
+        <view class='line'></view>
+        <text class='title'>热门搜索</text>
+      </view>
+      <view class='content'>
+        <block wx:for="{{hotData}}" wx:key="index">
+          <v-shorCom shortCon="{{item}}" class="item" bind:shorCom="searchBooks"></v-shorCom>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{bookListState}}" class='books'>
+    <block wx:for="{{searchBook}}" wx:key="id">
+      <v-books book="{{item}}" class="book" bind:toDetail="getId"></v-books>
+    </block>
+  </view>
+</view>
+<text class='no_ruslut' wx:if="{{noRuslut}}">没有查到书籍</text>
+
+<v-loading class="center" wx:if="{{addMoreIcon}}"></v-loading>
+<v-loading class="bottom" wx:if="{{loading}}"></v-loading>

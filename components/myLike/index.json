@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-heart": "../heart/index"
+  }
+}

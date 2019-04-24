@@ -1,0 +1,14 @@
+var format = function(text){
+  //\转译\ 去匹配\\n
+  var reg = getRegExp('\\\\n','g');
+  if(!text){ //有数据才去转译
+    return
+  }
+  return text.replace(reg,function(){
+    return '\n &nbsp;&nbsp;&nbsp;&nbsp;'
+  })
+}
+
+module.exports = {
+  format:format,
+}

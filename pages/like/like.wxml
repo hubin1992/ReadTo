@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <image class="bg" src="../../images/like/bg.png" />
+    <view class="content">
+      <v-button bind:getInfor="getDetail" buttonType="{{buttonType}}" wx:if="{{!showInfor}}">
+        <image src="../../images/like/click.png" slot="user" class='auther'></image>
+      </v-button>
+      <v-button bind:getInfor="getDetail" buttonType="{{buttonType}}" wx:if="{{showInfor}}">
+        <image src="{{userInfor.avatarUrl}}" slot="user" class='auther'></image>
+      </v-button>
+      <text class="name">{{userInfor.nickName}}</text>
+    </view>
+
+  </view>
+  <view class='myLike'>
+    <view class='title'>
+      <image src='../../images/like/floor@2x.png'></image>
+    </view>
+    <view class='like_content'>
+      <block wx:for="{{likeData}}" wx:key="{{item.id}}">
+        <v-myLike likeObj="{{item}}" type="{{item.type}}" bind:redirectPage="toPage"></v-myLike>
+      </block>
+    </view>
+  </view>
+</view>
